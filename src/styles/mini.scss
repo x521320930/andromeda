@@ -1,0 +1,16 @@
+@mixin clearfix {
+  &:before, 
+  &:after {
+    content: "";
+    display: table;
+    overflow: hidden;
+    font-size: 0;
+    clear: both;
+  }
+}
+@mixin header-hover {
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    color: #0066FF;
+  }
+}
