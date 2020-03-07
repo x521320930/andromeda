@@ -3,6 +3,7 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import './assets/css/font-awesome.min.css';
+import 'animate.css';
 import './styles/index.scss';
 Vue.config.productionTip = false;
 
