@@ -12,5 +12,8 @@ import { Component, Vue } from 'vue-property-decorator';
 })
 export default class Home extends Vue {
   private name: string = '';
+  private hours: string = '00';
+  private minutes: string = '00';
+  private seconds: string = '00';
 }
 </script>

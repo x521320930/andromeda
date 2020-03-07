@@ -1,7 +1,6 @@
 @import '~@/styles/variables.scss';
 @import '~@/styles/mini.scss';
 
-
 .banner {
   width: 100%;
   height: 300px;
@@ -10,6 +9,142 @@
   background-position: top center;
   background-size: cover;
 }
+
 .banner-dir {
   margin-bottom: 30px;
+}
+
+.section-container {
+  width: $layout-width;
+  margin: 0 auto;
+
+  .main-container {
+    float: left;
+    width: 910px;
+    border: 1px solid red;
+  }
+
+  .sideBar-container {
+    float: right;
+    width: 345px;
+    transition: all .5s ease-in;
+
+    .article-container {
+      background-color: #ffffff;
+      box-shadow: 0 0px 10px rgba(0, 0, 0, 0.05);
+      border-radius: 5px;
+      .time-box {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        // overflow: hidden;
+        .time-bg {
+          width: 100%;
+        }
+        .items-container {
+          display: flex;
+          justify-content: center;
+          // align-items: center;
+          position: absolute;
+          top: 40px;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          z-index: 1;
+          .time-box-items {
+            color: #fff;
+            text-shadow: 0.2px 0 5px rgb(47, 45, 45);
+
+            .items-num {
+              font-size: 50px;
+              line-height: 80px;
+              font-weight: normal;
+            }
+
+            .items-en {
+              font-size: 14px;
+
+            }
+
+            .items-dir {
+              font-size: 50px;
+              line-height: 70px;
+              font-weight: 100;
+              padding: 0 5px;
+            }
+          }
+        }
+
+      }
+      .about-box {
+        padding: 20px;
+        .about-me {
+          font-size: 16px;
+          text-align: left;
+          i {
+            color: #ff0000;
+            padding-right: 10px;
+          }
+          text-shadow: 0 1px 3px rgba(88,88,88,.1);
+        }
+        .blog-box {
+          .blog-info-items {
+            padding: 5px 0;
+            text-align: left;
+            font-size: 14px;
+            .blog-info-items-label {
+              float: left;
+            }
+            .blog-info-items-text {
+              overflow: hidden;
+              display: block;
+            }
+          }
+        }
+      }
+      @include clearfix
+    }
+    // 热度访问
+    .hot-Visit-container {
+      border-top: 1px solid #e4e4e4;
+      background-color: #fbfbfb;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      .hot-Visit-items {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        flex: 1;
+        .hot-Visit-title {
+          color: #999;
+          margin: 4px 0 6px;
+          font-size: 12px;
+        }
+        .hot-Visit-text {
+          color: #666;
+        }
+        &:before {
+          content: "";
+          height: 45px;
+          width: 1px;
+          position: absolute;
+          right: 0;
+          top: 5px;
+          z-index: 100;
+          background-color: #e4e4e4;
+        }
+        &:hover {
+          background-color: #fefefe;
+        }
+        &:nth-last-child(1) {
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @include clearfix
 }

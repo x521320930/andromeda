@@ -94,6 +94,8 @@ html, body {
 }
 body {
   background-color: #f4f4f4;
+  line-height: 1.5; 
+  cursor: url('~@/assets/imgs/body/blue.png'), auto;
 }
 
 :before, :after {
@@ -102,4 +104,7 @@ body {
 a {
   text-decoration: none;
   color: #212121;
+  &:hover {
+    cursor: url('~@/assets/imgs/body/fcous.png'), auto;
+  }
 }
