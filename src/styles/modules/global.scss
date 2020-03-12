@@ -98,7 +98,7 @@ body {
   cursor: url('~@/assets/imgs/body/blue.png'), auto;
 }
 
-:before, :after {
+* {
   box-sizing: border-box;
 }
 a {

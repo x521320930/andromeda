@@ -34,7 +34,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  记录成长
  
 相册
-
+ https://www.17sucai.com/pins/demo-show?id=3658
 视频
 
 留言板

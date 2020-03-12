@@ -21,7 +21,7 @@
   .main-container {
     float: left;
     width: 910px;
-    border: 1px solid red;
+    // border: 1px solid red;
   }
 
   .sideBar-container {
@@ -42,6 +42,7 @@
         // overflow: hidden;
         .time-bg {
           width: 100%;
+          height: 200px;
         }
 
         .items-container {
@@ -170,6 +171,39 @@
   @include clearfix
 }
 
+// .banner
+
+.bannder-container {
+  height: 200px;
+  display: flex;
+  margin-bottom: 20px;
+  overflow: hidden;
+  .carousel-box {
+    height: inherit;
+    width: 530px;
+    margin-right: 10px;
+    border: 1px solid red;
+  }
+  .recommend-box {
+    height: inherit;
+    width: 370px;
+    // border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+    align-content: space-between;
+    .recommend-card-items {
+      width: 179px;
+      height: 95px;
+      border: 1px solid red;
+      box-sizing: border-box;
+      &.recommend-card-mr {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
 
 .journalism-news {
   width: 100%;
@@ -239,7 +273,7 @@
     .items-info-meta {
       color: #999;
       font-size: 12px;
-      display: inline-block;
+      display: block;
       position: relative;
       margin: 0;
       text-align: left;
