@@ -31,7 +31,7 @@ export default class XHeader extends Vue {
       href: '#/'
     },
     {
-      name: '时光机',
+      name: '日记',
       href: '#/'
     },
     {

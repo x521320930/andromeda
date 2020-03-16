@@ -21,7 +21,8 @@ module.exports = {
   rules: {
     "no-console": "off",
     "no-debugger": "off",
-    "@typescript-eslint/no-inferrable-types": "off"
+    "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/no-explicit-any": "off"
   },
 
   extends: [

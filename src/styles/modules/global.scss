@@ -96,15 +96,18 @@ body {
   background-color: #f4f4f4;
   line-height: 1.5; 
   cursor: url('~@/assets/imgs/body/blue.png'), auto;
+  // filter: blur(1px); 
+  // background: url('https://acghgame.com/template/acgi_ox0/images/main_bg.jpg');
 }
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
 a {
   text-decoration: none;
   color: #212121;
   &:hover {
+    color: #ff6fa2;
     cursor: url('~@/assets/imgs/body/fcous.png'), auto;
   }
 }
