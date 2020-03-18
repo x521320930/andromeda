@@ -25,7 +25,7 @@ export default class Home extends Vue {
     pagination: {
       el: '.carousel-swiper-scrollbar',
       type: 'custom',
-      bulletActiveClass: 'carousel-swiper-pagination-active',
+      bulletActiveClass: 'carousel-swiper-pagination-active'
       // renderCustom: (swiper: any, current: number, total: number) => {
       //   let html = '';
       //   for (let i = 0; i < total; i++) {

@@ -111,3 +111,7 @@ a {
     cursor: url('~@/assets/imgs/body/fcous.png'), auto;
   }
 }
+::selection {
+  background: #ff5e52;
+  color: #fff;
+}
