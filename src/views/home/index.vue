@@ -5,10 +5,12 @@
 import { swiper, swiperSlide } from 'vue-awesome-swiper';
 import XHeader from '@/components/XHeader/index.vue';
 import { Component, Vue } from 'vue-property-decorator';
+import XFooter from '@/components/XFooter/index.vue';
 @Component({
   name: 'home',
   components: {
     XHeader,
+    XFooter,
     swiper,
     swiperSlide
   }

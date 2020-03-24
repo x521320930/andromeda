@@ -1,76 +1,42 @@
-<div class="home-page-contaner">
+<div class="album-page-contaner">
   <x-header/>
   <div class="banner"></div>
   <div class="banner-dir"></div>
   <section class="section-container">
     <div class="main-container">
-      <div class="bannder-container">
-        <div class="carousel-box">
-          <div class="carousel-slide">
-            <swiper class="carousel-swiper" :options="swiperOption" ref="carouselSwiper">
-              <swiper-slide v-for="(items, i) in swiperList" :key="i">
-                <a :href="items.jump" class="carousel-swiper-jump">
-                  <img class="carousel-swiper-icon" :src="items.icon" alt="">
-                  <p class="carousel-swiper-text">
-                    <span>{{ items.text }}</span>
-                  </p>
-                </a>
-              </swiper-slide>
-              <div class="carousel-swiper-scrollbar" slot="pagination">
-                <span class="carousel-swiper-pagination-items"
-                  :class="{'carousel-swiper-pagination-active': i === carouselSwiperPaginationActive}"
-                  @click="handleSarouselSwiperPagination(i)"
-                  v-for="(items, i) in swiperList" :key="i">
-                </span>
-              </div>
-            </swiper>
-          </div>
-        </div>
-        <div class="recommend-box">
-          <div class="recommend-card-items recommend-card-mr"></div>
-          <div class="recommend-card-items"></div>
-          <div class="recommend-card-items recommend-card-mr"></div>
-          <div class="recommend-card-items"></div>
+      <div class="layout-conent-title">
+        <div class="title-text">
+          <h2><i class="fa fa-bookmark"></i>宝宝相册</h2>
         </div>
       </div>
-      <div class="journalism-container">
-        <div class="layout-conent-title">
-          <div class="title-text">
-            <h2><i class="fa fa-bookmark"></i> 最新发布</h2>
+      <!-- 图片列表 -->
+      <div class="album-container">
+        <div class="album-items">
+          <img src="https://wuzuhua.wuzuhua.cn/dm" alt="">
+          <h4>我的</h4>
+          <div class="items-info-meta">
+            <span><i class="fa fa-eye"></i>观看(61)</span>
+            <span><i class="fa fa-comments-o"></i>评论(3)</span>
           </div>
-          <div class="boot-page">
-            <a href="#">宝宝成长</a>
-            <a href="#">宝宝趣事</a>
-            <a href="#">生活点滴</a>
-            <a href="#">育儿生活</a>
-            <a href="#">育儿心得</a>
+          <div class="album-author">
+            <span><i class="fa fa-user"></i>夏艺洹</span>
+            <span><i class="fa fa-clock-o"></i>2020-03-07</span>
           </div>
         </div>
-        <div class="journalism-news">
-          <div class="journalism-news-items">
-            <div class="journalism-news-items-icon">
-              <a><img src="https://wuzuhua.cn/wp-content/uploads/2020/02/pic1750-220x150.jpg" alt=""></a>
-            </div>
-            <div class="journalism-news-items-info">
-              <div class="items-info-title">
-                <a href="javascript:;" class="title-type">
-                  宝宝成长
-                  <i></i>
-                </a>
-                <h2><a>FreeMove-系统盘安装的软件转移至其他盘</a></h2>
-              </div>
-              <div class="items-info-content">
-                <span>我们在重装系统时C盘的文件必须清空，这样已经安装在C盘的软件也要被清空，现在如何把已经安装在系统盘的软件，转移到其他盘呢？直接剪切或拷贝显然是不行的，这么做的话，大多软件都会直接打不开。你当然可以直接</span>
-              </div>
-              <div class="items-info-meta">
-                <span><i class="fa fa-user"></i>夏艺洹</span>
-                <span><i class="fa fa-eye"></i>阅读(61)</span>
-                <span><i class="fa fa-comments-o"></i>评论(3)</span>
-                <span><i class="fa fa-clock-o"></i>2020-03-07</span>
-              </div>
-            </div>
+        <div class="album-items"
+          v-for="(item, i) in albumList"
+          :class="{'album-mr': i % 3 === 0 }"
+          :key="i">
+          <img :src="item.url"/>
+          <h4>{{ item.title }}</h4>
+          <div class="items-info-meta"> 
+            <span><i class="fa fa-eye"></i>观看( {{ item.watch }} )</span>
+            <span><i class="fa fa-comments-o"></i>评论( {{ item.remark }} )</span>
           </div>
-          
+          <div class="album-author">
+            <span><i class="fa fa-user"></i>{{ item.user }}</span>
+            <span><i class="fa fa-clock-o"></i>{{ item.time }}</span>
+          </div>
         </div>
       </div>
     </div>

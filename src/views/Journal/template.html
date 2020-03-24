@@ -4,48 +4,7 @@
   <div class="banner-dir"></div>
   <section class="section-container">
     <div class="main-container">
-      <div class="bannder-container">
-        <div class="carousel-box">
-          <div class="carousel-slide">
-            <swiper class="carousel-swiper" :options="swiperOption" ref="carouselSwiper">
-              <swiper-slide v-for="(items, i) in swiperList" :key="i">
-                <a :href="items.jump" class="carousel-swiper-jump">
-                  <img class="carousel-swiper-icon" :src="items.icon" alt="">
-                  <p class="carousel-swiper-text">
-                    <span>{{ items.text }}</span>
-                  </p>
-                </a>
-              </swiper-slide>
-              <div class="carousel-swiper-scrollbar" slot="pagination">
-                <span class="carousel-swiper-pagination-items"
-                  :class="{'carousel-swiper-pagination-active': i === carouselSwiperPaginationActive}"
-                  @click="handleSarouselSwiperPagination(i)"
-                  v-for="(items, i) in swiperList" :key="i">
-                </span>
-              </div>
-            </swiper>
-          </div>
-        </div>
-        <div class="recommend-box">
-          <div class="recommend-card-items recommend-card-mr"></div>
-          <div class="recommend-card-items"></div>
-          <div class="recommend-card-items recommend-card-mr"></div>
-          <div class="recommend-card-items"></div>
-        </div>
-      </div>
       <div class="journalism-container">
-        <div class="layout-conent-title">
-          <div class="title-text">
-            <h2><i class="fa fa-bookmark"></i> 最新发布</h2>
-          </div>
-          <div class="boot-page">
-            <a href="#">宝宝成长</a>
-            <a href="#">宝宝趣事</a>
-            <a href="#">生活点滴</a>
-            <a href="#">育儿生活</a>
-            <a href="#">育儿心得</a>
-          </div>
-        </div>
         <div class="journalism-news">
           <div class="journalism-news-items">
             <div class="journalism-news-items-icon">
@@ -70,7 +29,6 @@
               </div>
             </div>
           </div>
-          
         </div>
       </div>
     </div>
