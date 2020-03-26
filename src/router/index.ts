@@ -18,6 +18,11 @@ const routes: RouteConfig[] = [
     path: '/Album',
     name: '宝宝相册',
     component: () => import('../views/Album/index.vue')
+  },
+  {
+    path: '/news-detail',
+    name: '详情',
+    component: () => import('../views/news-detail/index.vue')
   }
 ];
 
