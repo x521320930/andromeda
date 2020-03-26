@@ -3,13 +3,16 @@
 
 <script lang="ts">
 import XHeader from '@/components/XHeader/index.vue';
-import { Component, Vue } from 'vue-property-decorator';
+import XSidebar from '@/components/Layout/XSidebar/index.vue';
 import XFooter from '@/components/XFooter/index.vue';
+import { Component, Vue } from 'vue-property-decorator';
+
 @Component({
   name: 'album',
   components: {
     XHeader,
-    XFooter
+    XFooter,
+    XSidebar
   }
 })
 export default class Album extends Vue {

@@ -2,7 +2,11 @@
 @import './variables.scss';
 @import './mini.scss';
 @import './transition.scss';
+@import './layout.scss';
 @import './modules/global.scss';
-@import './modules/header.scss';
-@import './modules/footer.scss';
+@import './modules/XHeader.scss';
+@import './modules/XFooter.scss';
+@import './modules/XBlog.scss';
+@import './modules/XPopularArticles.scss';
+@import './modules/XLatestComment.scss';
 

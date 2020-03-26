@@ -1,0 +1,38 @@
+// 热门文章
+.popular-articles-container {
+  margin-top: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 20px;
+  .popular-articles-content {
+    overflow: hidden;
+    .popular-articles-content-items {
+      padding: 15px 0;
+      overflow: hidden;
+      border-bottom: 1px solid #f0f0f0;
+      display: block;
+      .items-icon {
+        float: left;
+        width: 122px;
+        height: 70px;
+        margin-right: 20px;
+      }
+      .items-content {
+        overflow: hidden;
+        .text {
+          font-size: 14px;
+          display: block;
+        }
+        .time {
+          display: block;
+          margin-right: 15px;
+          font-size: 12px;
+          margin-top: 5px;
+          color: #bbb;
+        }
+      }
+    }
+    @include clearfix
+  }
+}

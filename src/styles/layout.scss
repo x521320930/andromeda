@@ -1,0 +1,51 @@
+.layout-section-container {
+  width: $layout-width;
+  margin: 0 auto;
+
+  .layout-main-container {
+    float: left;
+    width: 910px;
+  }
+  .layout-sideBar-container {
+    float: right;
+    width: 345px;
+    transition: all .5s ease-in;
+  }
+  @include clearfix
+}
+
+.layout-conent-title {
+  background-color: #ffffff;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  .title-text {
+    display: flex;
+    h2 {
+      font-size: 16px;
+      i {
+        padding-right: 10px;
+      }
+    }
+  }
+  .boot-page {
+    display: flex;
+    a {
+      font-size: 14px;
+      padding: 0 10px;
+    }
+  }
+}
+
+.layout-sideBar-title {
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 5px;
+  i {
+    color: #ff0000;
+    padding-right: 10px;
+  }
+
+  text-shadow: 0 1px 3px rgba(88, 88, 88, .1);
+}

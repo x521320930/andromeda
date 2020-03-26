@@ -1,0 +1,38 @@
+// 最新评论
+.latest-comment-container {
+  margin-top: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 20px;
+  .latest-comment-ct-items {
+    padding: 10px 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    i {
+      background-color: #7e7e7e;
+      height: 5px;
+      width: 5px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .user {
+      color: #45bcf9;
+      margin-right: 10px;
+    }
+    .ct {
+      flex: 1;
+      overflow: hidden;
+      margin-right: 10px;
+    }
+    .time {
+      color: #bbb;
+    }
+    &:hover {
+      color: #999;
+      background-color: #fbfbfb;
+    }
+  }
+}

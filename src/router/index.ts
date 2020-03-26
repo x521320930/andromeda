@@ -6,22 +6,26 @@ Vue.use(VueRouter);
 const routes: RouteConfig[] = [
   {
     path: '/',
-    name: '首页',
+    name: 'home',
+    meta: { title: '首页' },
     component: () => import('../views/Home/index.vue')
   },
   {
     path: '/Journal',
-    name: '日志',
+    name: 'Journal',
+    meta: { title: '日志' },
     component: () => import('../views/Journal/index.vue')
   },
   {
     path: '/Album',
-    name: '宝宝相册',
+    name: 'Album',
+    meta: { title: '宝宝相册' },
     component: () => import('../views/Album/index.vue')
   },
   {
     path: '/news-detail',
-    name: '详情',
+    name: 'news-detail',
+    meta: { title: '详情' },
     component: () => import('../views/news-detail/index.vue')
   }
 ];
