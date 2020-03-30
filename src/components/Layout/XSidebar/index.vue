@@ -1,5 +1,5 @@
 <template>
-  <div class="layout-sideBar-container">
+  <div class="layout-sideBar-container bounceInRight animated">
     <!-- 博主 -->
     <x-blog></x-blog>
     <!-- 热门文章 -->

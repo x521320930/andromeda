@@ -1,5 +1,5 @@
 <template src="./template.html"></template>
-<style lang="scss" src="./style.scss"></style>
+<style lang="scss" src="./style.scss" scoped></style>
 
 <script lang="ts">
 import XHeader from '@/components/XHeader/index.vue';

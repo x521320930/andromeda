@@ -1,21 +1,18 @@
 <template src="./template.html"></template>
-<style lang="scss" src="./style.scss"></style>
+<style lang="scss" src="./style.scss" scoped></style>
 
 <script lang="ts">
 import XHeader from '@/components/XHeader/index.vue';
 import { Component, Vue } from 'vue-property-decorator';
 import XFooter from '@/components/XFooter/index.vue';
+import XSidebar from '@/components/Layout/XSidebar/index.vue';
 @Component({
   name: 'NewsDetail',
   components: {
     XHeader,
-    XFooter
+    XFooter,
+    XSidebar
   }
 })
-export default class NewsDetail extends Vue {
-  private name: string = '';
-  private hours: string = '00';
-  private minutes: string = '00';
-  private seconds: string = '00';
-}
+export default class NewsDetail extends Vue {}
 </script>

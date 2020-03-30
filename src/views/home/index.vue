@@ -1,5 +1,5 @@
 <template src="./template.html"></template>
-<style lang="scss" src="./style.scss"></style>
+<style lang="scss" src="./style.scss" scoped></style>
 
 <script lang="ts">
 import { swiper, swiperSlide } from 'vue-awesome-swiper';
@@ -7,6 +7,7 @@ import XHeader from '@/components/XHeader/index.vue';
 import XSidebar from '@/components/Layout/XSidebar/index.vue';
 import { Component, Vue } from 'vue-property-decorator';
 import XFooter from '@/components/XFooter/index.vue';
+import XNews from '@/components/XNews/index.vue';
 @Component({
   name: 'home',
   components: {
@@ -14,7 +15,8 @@ import XFooter from '@/components/XFooter/index.vue';
     XSidebar,
     XFooter,
     swiper,
-    swiperSlide
+    swiperSlide,
+    XNews
   }
 })
 export default class Home extends Vue {

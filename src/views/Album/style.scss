@@ -1,10 +1,50 @@
 @import '~@/styles/variables.scss';
 @import '~@/styles/mini.scss';
 
+.album-banner {
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 246px;
+  .banner {
+    height: 200px;
+    background: url('https://wuzuhua.wuzuhua.cn/dm') no-repeat;
+    background-position: top center;
+    background-size: cover;
+  }
+  .layout-conent-title {
+    padding: 0 20px;
+  }
+}
+
+.layout-main-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-sizing: content-box;
+}
+// 查询
+.album-query {
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px;
+  margin-top: 10px;
+  span {
+    padding: 3px 0;
+    display: inline-block;
+    margin-right: 10px;
+    &:hover {
+      color: #f66;
+      cursor: url('~@/assets/imgs/body/fcous.png'), auto;
+    }
+  }
+}
+
 .album-container {
   display: flex;
   flex-wrap: wrap;
   padding: 0 20px; 
+  padding-top: 20px;
   .album-items {
     width: 270px;
     border-radius: 4px;
@@ -13,6 +53,7 @@
     margin: 0 0px 30px 0;
     position: relative;
     box-shadow: 0 3px 10px 1px rgba(97, 97, 97, 0.1);
+    transition: all 0.3s ease-in;
     img {
       width: inherit;
       height: 148px;
@@ -60,6 +101,7 @@
     }
     &:hover {
       box-shadow: 0 0 20px rgba(11, 215, 225, 0.35);
+      transform: scale(1.05);
     }
   }
 } 

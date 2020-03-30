@@ -94,10 +94,9 @@ html, body {
  height: 100%;
 }
 body {
-  background-color: #f4f4f4;
+  background: url('http://ciyuan.wh8g.com/./template/the_c_style/images/cbg_1.jpg') no-repeat center top fixed;
   line-height: 1.5; 
   cursor: url('~@/assets/imgs/body/blue.png'), auto;
-  background: linear-gradient(rgba(255,255,255,0),#f9f9f9 900px,#f9f9f9 100%),rgba(255,255,255,0.3);
   font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
   font-size: 12px;
   line-height: 1.5;
@@ -123,4 +122,9 @@ a {
 ::selection {
   background: #ff5e52;
   color: #fff;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }

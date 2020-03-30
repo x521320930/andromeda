@@ -1,17 +1,12 @@
 <div class="home-page-contaner">
   <x-header/>
-  <div class="banner"></div>
-  <div class="banner-dir"></div>
-  <section class="section-container">
-    <div class="main-container" style="background-color: #ffffff;">
+  <section class="layout-section-container">
+    <div class="layout-main-container bounceInLeft animated">
       <div class="news-info-header">
         <h1 class="news-info-title">
-          <a href="javascript:;" class="activity">宝宝照片</a>
+          <a class="activity">宝宝相册</a>
           <span class="tit">美沙子带你逛日本Lo娘茶会！【vlog】</span>
         </h1>
-        <div class="news-info-data">
-          <span>2020-03-22 17:29:11</span>
-        </div>
         <div class="news-info-data">
           <span>2020-03-22 17:29:11</span>
         </div>
@@ -21,11 +16,6 @@
           <img src="~@/assets/imgs/home/time-bg.jpg" alt="">
         </div>
       </div>
-      <!-- <div class="news-info-toolbar">
-        <div class="ops">
-          <span><i></i> 9496 </span>
-        </div>
-      </div> -->
       <div class="news-info-desc">
         <div class="info open">
           怪我台词太差，姥爷根本不上当，甚至轻松反杀...自己回听感觉自己也太蠢了！哪有骗子劝人别吃剩菜的！！！
@@ -37,9 +27,9 @@
           <span class="comment-head-t">470</span>
           <span class="comment-head-t">评论</span>
         </div>
-        <div class="comment-header">
+        <!-- <div class="comment-header">
           <div class="header-page">分页</div>
-        </div>
+        </div> -->
         <div class="comment-send">
           <div class="user-face">
             <img class="user-head" src="~@/assets/imgs/home/time-bg.jpg" />
@@ -72,145 +62,7 @@
         </div>
       </div>
     </div>
-    <div class="sideBar-container ">
-      <div class="article-container animated">
-        <div class="time-box">
-          <img class="time-bg" src="~@/assets/imgs/home/time-bg.jpg" alt="图">
-          <div class="items-container">
-            <div class="time-box-items">
-              <div class="items-num">{{hours}}</div><div class="items_en">hours</div>
-            </div> 
-            <div class="time-box-items">
-              <div class="items-dir">:</div>
-            </div>
-            <div class="time-box-items">
-              <div class="items-num">{{minutes}}</div><div class="items_en">minutes</div>
-            </div>
-            <div class="time-box-items">
-              <div class="items-dir">:</div>
-            </div>
-            <div class="time-box-items">
-              <div class="items-num">{{seconds}}</div><div class="items_en">seconds</div>
-            </div>
-          </div>
-        </div>
-        <div class="about-box">
-          <div class="about-me"><i class="fa fa-bookmark"></i><span>关于博主</span></div>
-          <div class="blog-box">
-            <div class="blog-info-items">
-              <span class="blog-info-items-label">博主年龄：</span>
-              <span class="blog-info-items-text">1年4月</span>
-            </div>
-            <div class="blog-info-items">
-              <span class="blog-info-items-label">博主爱好：</span>
-              <span class="blog-info-items-text">我最喜欢 吃、睡、玩</span>
-            </div>
-            <div class="blog-info-items">
-              <span class="blog-info-items-label">个人描述：</span>
-              <span class="blog-info-items-text">人总是珍惜未得到的，而遗忘了所拥有的。</span>
-            </div>
-          </div>
-        </div>
-        <div class="hot-Visit-container">
-          <div class="hot-Visit-items">
-            <span class="hot-Visit-title">文章</span>
-            <span class="hot-Visit-text">00</span>
-          </div>
-          <div class="hot-Visit-items">
-            <span class="hot-Visit-title">评论</span>
-            <span class="hot-Visit-text">00</span>
-          </div>
-          <div class="hot-Visit-items">
-            <span class="hot-Visit-title">访问</span>
-            <span class="hot-Visit-text">00</span>
-          </div>
-          <div class="hot-Visit-items">
-            <span class="hot-Visit-title">用户</span>
-            <span class="hot-Visit-text">00</span>
-          </div>
-        </div>
-      </div>
-      <div class="popular-articles-container">
-        <div class="layout-sideBar-title"><i class="fa fa-bookmark"></i><span>热门文章</span></div>
-        <div class="popular-articles-content">
-          <a class="popular-articles-content-items" href="javascript:;">
-            <img class="items-icon" src="https://wuzuhua.cn/wp-content/uploads/2019/01/20190124210321663.jpg" alt="">
-            <div class="items-content">
-              <span class="text">2019年QQ透明头像与QQ动态头像设置方法</span>
-              <span class="time">2019-01-24</span>
-            </div>
-          </a>
-          <a class="popular-articles-content-items" href="javascript:;">
-            <img class="items-icon" src="https://wuzuhua.cn/wp-content/uploads/2019/01/20190124210321663.jpg" alt="">
-            <div class="items-content">
-              <span class="text">2019年QQ透明头像与QQ动态头像设置方法</span>
-              <span class="time">2019-01-24</span>
-            </div>
-          </a>
-          <a class="popular-articles-content-items" href="javascript:;">
-            <img class="items-icon" src="https://wuzuhua.cn/wp-content/uploads/2019/01/20190124210321663.jpg" alt="">
-            <div class="items-content">
-              <span class="text">2019年QQ透明头像与QQ动态头像设置方法</span>
-              <span class="time">2019-01-24</span>
-            </div>
-          </a>
-          <a class="popular-articles-content-items" href="javascript:;">
-            <img class="items-icon" src="https://wuzuhua.cn/wp-content/uploads/2019/01/20190124210321663.jpg" alt="">
-            <div class="items-content">
-              <span class="text">2019年QQ透明头像与QQ动态头像设置方法</span>
-              <span class="time">2019-01-24</span>
-            </div>
-          </a>
-          <a class="popular-articles-content-items" href="javascript:;">
-            <img class="items-icon" src="https://wuzuhua.cn/wp-content/uploads/2019/01/20190124210321663.jpg" alt="">
-            <div class="items-content">
-              <span class="text">2019年QQ透明头像与QQ动态头像设置方法</span>
-              <span class="time">2019-01-24</span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="latest-comment-container">
-        <div class="layout-sideBar-title"><i class="fa fa-bookmark"></i><span>最新评论</span></div>
-        <div class="latest-comment-ct">
-          <a class="latest-comment-ct-items" href="javascript:;">
-            <i></i>
-            <span class="user"></span>
-            <span class="user">夏艺洹</span>
-            <span class="ct">我已经评论过了</span>
-            <span class="time">刚刚</span>
-          </a>
-          <a class="latest-comment-ct-items" href="javascript:;">
-            <i></i>
-            <span class="user"></span>
-            <span class="user">夏艺洹</span>
-            <span class="ct">我已经评论过了</span>
-            <span class="time">刚刚</span>
-          </a>
-          <a class="latest-comment-ct-items" href="javascript:;">
-            <i></i>
-            <span class="user"></span>
-            <span class="user">夏艺洹</span>
-            <span class="ct">我已经评论过了</span>
-            <span class="time">刚刚</span>
-          </a>
-          <a class="latest-comment-ct-items" href="javascript:;">
-            <i></i>
-            <span class="user"></span>
-            <span class="user">夏艺洹</span>
-            <span class="ct">我已经评论过了</span>
-            <span class="time">刚刚</span>
-          </a>
-          <a class="latest-comment-ct-items" href="javascript:;">
-            <i></i>
-            <span class="user"></span>
-            <span class="user">夏艺洹</span>
-            <span class="ct">我已经评论过了</span>
-            <span class="time">刚刚</span>
-          </a>
-        </div>
-      </div>
-    </div>
+    <x-sidebar></x-sidebar>
   </section>
   <x-footer/>
 </div>

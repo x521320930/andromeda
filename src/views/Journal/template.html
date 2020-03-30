@@ -1,174 +1,23 @@
 <div class="home-page-contaner">
   <x-header/>
-  <section class="section-container">
-    <div class="main-container">
-      <div class="journalism-container">
-        <div class="journalism-news">
-          <div class="journalism-news-items">
-            <div class="journalism-news-items-icon">
-              <a><img src="https://wuzuhua.cn/wp-content/uploads/2020/02/pic1750-220x150.jpg" alt=""></a>
-            </div>
-            <div class="journalism-news-items-info">
-              <div class="items-info-title">
-                <a href="javascript:;" class="title-type">
-                  宝宝成长
-                  <i></i>
-                </a>
-                <h2><a>FreeMove-系统盘安装的软件转移至其他盘</a></h2>
-              </div>
-              <div class="items-info-content">
-                <span>我们在重装系统时C盘的文件必须清空，这样已经安装在C盘的软件也要被清空，现在如何把已经安装在系统盘的软件，转移到其他盘呢？直接剪切或拷贝显然是不行的，这么做的话，大多软件都会直接打不开。你当然可以直接</span>
-              </div>
-              <div class="items-info-meta">
-                <span><i class="fa fa-user"></i>夏艺洹</span>
-                <span><i class="fa fa-eye"></i>阅读(61)</span>
-                <span><i class="fa fa-comments-o"></i>评论(3)</span>
-                <span><i class="fa fa-clock-o"></i>2020-03-07</span>
-              </div>
-            </div>
-          </div>
+  <section class="layout-section-container">
+    <div class="layout-main-container">
+      <div class="layout-conent-title">
+        <div class="title-text">
+          <h2>{{ $route.meta.title }}</h2>
+        </div>
+        <div class="boot-page">
+          <router-link
+            v-show="$route.path !== item.to"
+            v-for="(item, i) in routeList"
+            :to="item.to" :key="i">
+            <span>{{ item.name }}</span>
+          </router-link>
         </div>
       </div>
+      <x-news></x-news>
     </div>
-    <div class="sideBar-container ">
-      <div class="article-container animated">
-        <div class="time-box">
-          <img class="time-bg" src="~@/assets/imgs/home/time-bg.jpg" alt="图">
-          <div class="items-container">
-            <div class="time-box-items">
-              <div class="items-num">{{hours}}</div><div class="items_en">hours</div>
-            </div> 
-            <div class="time-box-items">
-              <div class="items-dir">:</div>
-            </div>
-            <div class="time-box-items">
-              <div class="items-num">{{minutes}}</div><div class="items_en">minutes</div>
-            </div>
-            <div class="time-box-items">
-              <div class="items-dir">:</div>
-            </div>
-            <div class="time-box-items">
-              <div class="items-num">{{seconds}}</div><div class="items_en">seconds</div>
-            </div>
-          </div>
-        </div>
-        <div class="about-box">
-          <div class="about-me"><i class="fa fa-bookmark"></i><span>关于博主</span></div>
-          <div class="blog-box">
-            <div class="blog-info-items">
-              <span class="blog-info-items-label">博主年龄：</span>
-              <span class="blog-info-items-text">1年4月</span>
-            </div>
-            <div class="blog-info-items">
-              <span class="blog-info-items-label">博主爱好：</span>
-              <span class="blog-info-items-text">我最喜欢 吃、睡、玩</span>
-            </div>
-            <div class="blog-info-items">
-              <span class="blog-info-items-label">个人描述：</span>
-              <span class="blog-info-items-text">人总是珍惜未得到的，而遗忘了所拥有的。</span>
-            </div>
-          </div>
-        </div>
-        <div class="hot-Visit-container">
-          <div class="hot-Visit-items">
-            <span class="hot-Visit-title">文章</span>
-            <span class="hot-Visit-text">00</span>
-          </div>
-          <div class="hot-Visit-items">
-            <span class="hot-Visit-title">评论</span>
-            <span class="hot-Visit-text">00</span>
-          </div>
-          <div class="hot-Visit-items">
-            <span class="hot-Visit-title">访问</span>
-            <span class="hot-Visit-text">00</span>
-          </div>
-          <div class="hot-Visit-items">
-            <span class="hot-Visit-title">用户</span>
-            <span class="hot-Visit-text">00</span>
-          </div>
-        </div>
-      </div>
-      <div class="popular-articles-container">
-        <div class="layout-sideBar-title"><i class="fa fa-bookmark"></i><span>热门文章</span></div>
-        <div class="popular-articles-content">
-          <a class="popular-articles-content-items" href="javascript:;">
-            <img class="items-icon" src="https://wuzuhua.cn/wp-content/uploads/2019/01/20190124210321663.jpg" alt="">
-            <div class="items-content">
-              <span class="text">2019年QQ透明头像与QQ动态头像设置方法</span>
-              <span class="time">2019-01-24</span>
-            </div>
-          </a>
-          <a class="popular-articles-content-items" href="javascript:;">
-            <img class="items-icon" src="https://wuzuhua.cn/wp-content/uploads/2019/01/20190124210321663.jpg" alt="">
-            <div class="items-content">
-              <span class="text">2019年QQ透明头像与QQ动态头像设置方法</span>
-              <span class="time">2019-01-24</span>
-            </div>
-          </a>
-          <a class="popular-articles-content-items" href="javascript:;">
-            <img class="items-icon" src="https://wuzuhua.cn/wp-content/uploads/2019/01/20190124210321663.jpg" alt="">
-            <div class="items-content">
-              <span class="text">2019年QQ透明头像与QQ动态头像设置方法</span>
-              <span class="time">2019-01-24</span>
-            </div>
-          </a>
-          <a class="popular-articles-content-items" href="javascript:;">
-            <img class="items-icon" src="https://wuzuhua.cn/wp-content/uploads/2019/01/20190124210321663.jpg" alt="">
-            <div class="items-content">
-              <span class="text">2019年QQ透明头像与QQ动态头像设置方法</span>
-              <span class="time">2019-01-24</span>
-            </div>
-          </a>
-          <a class="popular-articles-content-items" href="javascript:;">
-            <img class="items-icon" src="https://wuzuhua.cn/wp-content/uploads/2019/01/20190124210321663.jpg" alt="">
-            <div class="items-content">
-              <span class="text">2019年QQ透明头像与QQ动态头像设置方法</span>
-              <span class="time">2019-01-24</span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="latest-comment-container">
-        <div class="layout-sideBar-title"><i class="fa fa-bookmark"></i><span>最新评论</span></div>
-        <div class="latest-comment-ct">
-          <a class="latest-comment-ct-items" href="javascript:;">
-            <i></i>
-            <span class="user"></span>
-            <span class="user">夏艺洹</span>
-            <span class="ct">我已经评论过了</span>
-            <span class="time">刚刚</span>
-          </a>
-          <a class="latest-comment-ct-items" href="javascript:;">
-            <i></i>
-            <span class="user"></span>
-            <span class="user">夏艺洹</span>
-            <span class="ct">我已经评论过了</span>
-            <span class="time">刚刚</span>
-          </a>
-          <a class="latest-comment-ct-items" href="javascript:;">
-            <i></i>
-            <span class="user"></span>
-            <span class="user">夏艺洹</span>
-            <span class="ct">我已经评论过了</span>
-            <span class="time">刚刚</span>
-          </a>
-          <a class="latest-comment-ct-items" href="javascript:;">
-            <i></i>
-            <span class="user"></span>
-            <span class="user">夏艺洹</span>
-            <span class="ct">我已经评论过了</span>
-            <span class="time">刚刚</span>
-          </a>
-          <a class="latest-comment-ct-items" href="javascript:;">
-            <i></i>
-            <span class="user"></span>
-            <span class="user">夏艺洹</span>
-            <span class="ct">我已经评论过了</span>
-            <span class="time">刚刚</span>
-          </a>
-        </div>
-      </div>
-    </div>
+    <x-sidebar></x-sidebar>
   </section>
   <x-footer/>
 </div>
