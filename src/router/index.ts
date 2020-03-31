@@ -8,7 +8,7 @@ export const routes: RouteConfig[] = [
     path: '/',
     name: 'home',
     meta: { title: '首页', nav: true },
-    component: () => import(/* webpackChunkName: "home" */ '../views/Home/index.vue')
+    component: () => import(/* webpackChunkName: "home" */ '../views/home/index.vue')
   },
   {
     path: '/Journal/growing',
