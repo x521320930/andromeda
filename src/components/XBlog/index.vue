@@ -4,21 +4,21 @@
       <img class="time-bg" src="~@/assets/imgs/home/time-bg.jpg" alt="图" />
       <div class="items-container">
         <div class="time-box-items">
-          <div class="items-num">{{ hours }}</div>
+          <div class="items-num">{{ hours | frmatTime }}</div>
           <div class="items_en">hours</div>
         </div>
         <div class="time-box-items">
           <div class="items-dir">:</div>
         </div>
         <div class="time-box-items">
-          <div class="items-num">{{ minutes }}</div>
+          <div class="items-num">{{ minutes | frmatTime }}</div>
           <div class="items_en">minutes</div>
         </div>
         <div class="time-box-items">
           <div class="items-dir">:</div>
         </div>
         <div class="time-box-items">
-          <div class="items-num">{{ seconds }}</div>
+          <div class="items-num">{{ seconds | frmatTime }}</div>
           <div class="items_en">seconds</div>
         </div>
       </div>
@@ -63,11 +63,41 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-@Component({ name: 'XBlog' })
+@Component({
+  name: 'XBlog',
+  filters: {
+    frmatTime(val: number) {
+      return val > 10 ? val : `0${val}`;
+    }
+  }
+})
 export default class XBlog extends Vue {
   private name: string = '';
-  private hours: string = '00';
-  private minutes: string = '00';
-  private seconds: string = '00';
+  private hours = 0;
+  private minutes = 0;
+  private seconds = 0;
+
+  private time: any = null;
+
+  private getDate() {
+    const date = new Date();
+    this.hours = date.getHours();
+    this.minutes = date.getMinutes();
+    this.seconds = date.getSeconds();
+  }
+
+  private hanldeTimeoutTime() {
+    this.time = setInterval(this.getDate, 1000);
+  }
+
+  mounted() {
+    this.hanldeTimeoutTime();
+  }
+
+  beforeDestroy() {
+    if (this.time) {
+      clearInterval(this.time);
+    }
+  }
 }
 </script>

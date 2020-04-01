@@ -7,7 +7,7 @@
       <!-- 首页轮播图 -->
       <div class="bannder-container bounceIn animated">
         <div class="carousel-box">
-          <div class="carousel-swiper" style="transform:translate3d(0px, 0px, 0px);transition-duration: 380ms">
+          <div class="carousel-swiper" ref="swiper">
             <div class="carousel-swiper-items" v-for="(items, i) in swiperList" :key="i">
               <a :href="items.jump" class="carousel-swiper-jump">
                 <img class="carousel-swiper-icon" :src="items.icon" alt="">
@@ -19,8 +19,8 @@
           </div>
           <div class="carousel-swiper-scrollbar">
             <span class="carousel-swiper-pagination-items"
-              :class="{'carousel-swiper-pagination-active': i === carouselSwiperPaginationActive}"
-              @click="handleSarouselSwiperPagination(i)"
+              :class="{'carousel-swiper-pagination-active': i === swiperIndex}"
+              @click="handleSwiperPagination(i)"
               v-for="(items, i) in swiperList" :key="i">
             </span>
           </div>

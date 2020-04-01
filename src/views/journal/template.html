@@ -1,0 +1,23 @@
+<div class="home-page-contaner">
+  <x-header/>
+  <section class="layout-section-container">
+    <div class="layout-main-container">
+      <div class="layout-conent-title">
+        <div class="title-text">
+          <h2>{{ $route.meta.title }}</h2>
+        </div>
+        <div class="boot-page">
+          <router-link
+            v-show="$route.path !== item.to"
+            v-for="(item, i) in routeList"
+            :to="item.to" :key="i">
+            <span>{{ item.name }}</span>
+          </router-link>
+        </div>
+      </div>
+      <x-news></x-news>
+    </div>
+    <x-sidebar></x-sidebar>
+  </section>
+  <x-footer/>
+</div>

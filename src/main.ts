@@ -5,7 +5,6 @@ import store from './store';
 import './permission';
 import './styles/animate.css';
 import 'normalize.css';
-import 'swiper/dist/css/swiper.css';
 import './assets/css/font-awesome.min.css';
 
 import './styles/index.scss';

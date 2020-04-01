@@ -1,0 +1,53 @@
+<div class="album-page-contaner">
+  <x-header/>
+  <section class="layout-section-container">
+    <div class="album-banner">
+      <div class="banner"></div>
+      <div class="layout-conent-title">
+        <div class="title-text">
+          <h2></i>宝宝相册</h2>
+        </div>
+      </div>
+    </div>
+    <div class="layout-main-container">
+      <!-- 查询 -->
+      <div class="album-query">
+        <span>全部</span>
+        <span>最新</span>
+        <span>最热</span>
+      </div>
+      <!-- 图片列表 -->
+      <div class="album-container">
+        <div class="album-items">
+          <img src="https://wuzuhua.wuzuhua.cn/dm" alt="">
+          <h4>我的</h4>
+          <div class="items-info-meta">
+            <span><i class="fa fa-eye"></i>观看(61)</span>
+            <span><i class="fa fa-comments-o"></i>评论(3)</span>
+          </div>
+          <div class="album-author">
+            <span><i class="fa fa-user"></i>夏艺洹</span>
+            <span><i class="fa fa-clock-o"></i>2020-03-07</span>
+          </div>
+        </div>
+        <div class="album-items"
+          v-for="(item, i) in albumList"
+          :class="{'album-mr': i % 3 === 0 }"
+          :key="i">
+          <img :src="item.url"/>
+          <h4>{{ item.title }}</h4>
+          <div class="items-info-meta"> 
+            <span><i class="fa fa-eye"></i>观看( {{ item.watch }} )</span>
+            <span><i class="fa fa-comments-o"></i>评论( {{ item.remark }} )</span>
+          </div>
+          <div class="album-author">
+            <span><i class="fa fa-user"></i>{{ item.user }}</span>
+            <span><i class="fa fa-clock-o"></i>{{ item.time }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <x-sidebar></x-sidebar>
+  </section>
+  <x-footer/>
+</div>
