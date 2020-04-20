@@ -30,6 +30,13 @@
             </div>
           </div>
         </div>
+        <div class="header-container__login_button">
+          <a @click="login">登录</a><a @click="signUp">注册</a>
+        </div>
+        <div class="header-container__login_box">
+          <login :is-show="isLogin" @close="handleLoginClose"></login>
+          <sign-up :is-show="isSignUp" @close="handleSignUpClose"></sign-up>
+        </div>
       </div>
     </div>
     <div class="banner-dir"></div>
@@ -39,14 +46,43 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import { routes } from '@/router';
-@Component({ name: 'XHeader' })
+import Login from './components/login.vue';
+import SignUp from './components/signUp.vue';
+@Component({
+  name: 'XHeader',
+  components: {
+    Login,
+    SignUp
+  }
+})
 export default class XHeader extends Vue {
-  private name: string = '';
+  private name = '';
   private navList = routes;
+  private isLogin = false;
+  private isSignUp = false;
+  private user_name = '';
+  private password = '';
+  private c_password = '';
+
   private jump(data: { name: string; href: string }) {
     const { path } = this.$route;
     if (path === data.href) return;
     this.$router.push(data.href);
+  }
+
+  private login() {
+    this.isLogin = true;
+  }
+
+  private handleLoginClose() {
+    this.isLogin = false;
+  }
+
+  private signUp() {
+    this.isSignUp = true;
+  }
+  private handleSignUpClose() {
+    this.isSignUp = false;
   }
 }
 </script>

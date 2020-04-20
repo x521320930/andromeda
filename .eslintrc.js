@@ -22,7 +22,8 @@ module.exports = {
     "no-console": "off",
     "no-debugger": "off",
     "@typescript-eslint/no-inferrable-types": "off",
-    "@typescript-eslint/no-explicit-any": "off"
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/camelcase": "off"
   },
 
   extends: [
